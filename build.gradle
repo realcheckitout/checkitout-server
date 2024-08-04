@@ -49,12 +49,6 @@ application {
 	mainClass.set('threetwoone.jocoding.JocodingApplication') // Specify your main class here
 }
 
-jar {
-	from(sourceSets.main.output) {
-		exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
-		// Add any additional excludes as necessary
-	}
-}
 
 bootJar {
 	// Exclude test and documentation classes
