@@ -1,0 +1,14 @@
+# Exclude IDE-specific files
+.idea/
+*.iml
+
+# Exclude local Gradle caches
+.gradle/
+build/
+
+# Exclude test files
+src/test/
+
+# Exclude documentation and assets not needed in production
+docs/
+assets/
