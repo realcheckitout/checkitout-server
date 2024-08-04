@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/checkitout
+    url: jdbc:mysql://localhost:3306/checkitout?useSSL=false&serverTimezone=UTC
     username: root
     password: Dmagmagma1234!
     driver-class-name: com.mysql.cj.jdbc.Driver
