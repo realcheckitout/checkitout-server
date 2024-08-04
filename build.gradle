@@ -7,8 +7,8 @@ plugins {
 
 group = 'threetwoone'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '21'
-targetCompatibility = '21'
+//sourceCompatibility = '21'
+//targetCompatibility = '21'
 
 java {
 	toolchain {
@@ -48,3 +48,17 @@ tasks.named('test') {
 application {
 	mainClass.set('threetwoone.jocoding.JocodingApplication') // Specify your main class here
 }
+
+jar {
+	from(sourceSets.main.output) {
+		exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+		// Add any additional excludes as necessary
+	}
+}
+
+bootJar {
+	// Exclude test and documentation classes
+	exclude '**/test/**', '**/docs/**'
+}
+
+
